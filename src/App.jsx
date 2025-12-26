@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from './components/hero';
+import Hero from './components/HeroSection';
 import Services from './components/Services'; // Essa mantém a explicação visual (ícones)
 import ServicePrices from './components/ServicePrices'; // <--- A NOVA TABELA AQUI
 import Gallery from './components/Gallery';
