@@ -7,49 +7,50 @@ const mainServices = [
         id: 1,
         name: "Extensão Clássica (Fio a Fio)",
         desc: "Efeito rímel natural, leveza e sofisticação.",
-        price: "R$ 160,00",
-        message: "Olá Laura! Gostaria de agendar a Extensão Clássica."
+        price: "Consultar",
+        message: "Olá Laura! Gostaria de saber mais sobre a Extensão Clássica."
     },
     {
         id: 2,
         name: "Volume Híbrido",
         desc: "A mistura perfeita entre o clássico e o volume.",
-        price: "R$ 190,00",
-        message: "Olá Laura! Gostaria de agendar o Volume Híbrido."
+        price: "Consultar",
+        message: "Olá Laura! Poderia me explicar como funciona o Volume Híbrido?"
     },
     {
         id: 3,
         name: "Volume Russo",
         desc: "Olhar marcante, preenchido e glamuroso.",
-        price: "R$ 220,00",
-        message: "Olá Laura! Gostaria de agendar o Volume Russo."
+        price: "Consultar",
+        message: "Olá Laura! Tenho interesse no Volume Russo, como é?"
     },
     {
         id: 4,
-        name: "Lash Lifting + Nutrição",
-        desc: "Curvatura natural dos seus próprios fios com tratamento.",
-        price: "R$ 140,00",
-        message: "Olá Laura! Gostaria de agendar o Lash Lifting."
+        name: "Efeitos Personalizados",
+        desc: "Wispy, Fada, Sereia, Cisne, Anime (Kim K).",
+        price: "Consultar",
+        message: "Olá Laura! Quais são os Efeitos Personalizados disponíveis?"
     },
     {
         id: 5,
         name: "Brow Lamination",
         desc: "Sobrancelhas alinhadas e encorpadas (efeito wild).",
-        price: "R$ 130,00",
-        message: "Olá Laura! Gostaria de agendar o Brow Lamination."
+        price: "Consultar",
+        message: "Olá Laura! Gostaria de entender melhor o Brow Lamination."
     },
     {
         id: 6,
         name: "Design Personalizado",
         desc: "Mapeamento facial para encontrar o formato ideal.",
-        price: "R$ 55,00",
-        message: "Olá Laura! Gostaria de agendar um Design de Sobrancelhas."
+        price: "Consultar",
+        message: "Olá Laura! Quero agendar um Design de Sobrancelhas."
     }
 ];
 
 const ServicePrices = () => {
     const generateLink = (message) => {
-        const phone = "5513991700734";
+        // NÚMERO CORRIGIDO DA BIO (com 55 do Brasil)
+        const phone = "5513974235583";
         return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     };
 
@@ -57,7 +58,6 @@ const ServicePrices = () => {
         <section className="py-20 bg-white">
             <div className="container mx-auto px-6 max-w-4xl">
 
-                {/* Cabeçalho */}
                 <div className="text-center mb-16">
                     <span className="text-brand-gold text-xs font-bold tracking-[0.2em] uppercase">
                         Investimento
@@ -66,11 +66,11 @@ const ServicePrices = () => {
                         Menu de Procedimentos
                     </h2>
                     <p className="text-gray-500 font-light max-w-lg mx-auto">
-                        Valores referentes à primeira aplicação. Manutenções possuem tabela especial.
+                        Trabalhamos com visagismo para entregar o olhar perfeito para você.
+                        Clique para consultar valores e disponibilidade.
                     </p>
                 </div>
 
-                {/* Lista de Preços */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {mainServices.map((service, index) => (
                         <motion.a
@@ -95,18 +95,17 @@ const ServicePrices = () => {
                             </div>
 
                             <div className="flex items-center justify-between border-t border-brand-dark/5 pt-4 mt-auto">
-                                <span className="text-2xl font-serif text-brand-gold font-medium">
+                                <span className="text-lg font-serif text-brand-gold font-medium">
                                     {service.price}
                                 </span>
                                 <span className="text-xs font-bold uppercase tracking-wider text-brand-dark flex items-center gap-2 group-hover:gap-3 transition-all">
-                                    Agendar <ArrowRight size={14} />
+                                    Tirar Dúvida <ArrowRight size={14} />
                                 </span>
                             </div>
                         </motion.a>
                     ))}
                 </div>
 
-                {/* Aviso de pagamento */}
                 <div className="mt-12 text-center">
                     <p className="text-xs text-gray-400 uppercase tracking-widest">
                         Aceitamos Pix e Cartão de Crédito

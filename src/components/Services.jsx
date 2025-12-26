@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Eye, Sparkles, Feather } from 'lucide-react'; // Ícones leves
+import { Eye, Sparkles, Wand2 } from 'lucide-react';
 
 const services = [
     {
@@ -11,9 +11,9 @@ const services = [
     },
     {
         id: 2,
-        title: "Lash Lifting",
-        desc: "Curvatura natural e tratamento com vitaminas. Perfeito para quem ama praticidade e saúde dos fios.",
-        icon: <Feather className="text-brand-gold" size={32} />,
+        title: "Efeitos Personalizados",
+        desc: "Tendências exclusivas: Wispy, Fada, Sereia, Cisne e Anime. Um design único desenhado para você.",
+        icon: <Wand2 className="text-brand-gold" size={32} />,
     },
     {
         id: 3,
@@ -27,8 +27,6 @@ const Services = () => {
     return (
         <section id="servicos" className="py-20 px-6 bg-white">
             <div className="container mx-auto">
-
-                {/* Título da Seção */}
                 <div className="text-center mb-16">
                     <span className="text-brand-gold text-xs font-bold tracking-[0.2em] uppercase">
                         Menu de Procedimentos
@@ -38,13 +36,12 @@ const Services = () => {
                     </h2>
                 </div>
 
-                {/* Grid de Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <motion.div
                             key={service.id}
                             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }} // Anima quando aparece na tela
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
                             className="group p-8 rounded-2xl bg-brand-light border border-transparent hover:border-brand-gold/30 hover:shadow-lg transition-all duration-300 text-center"
@@ -56,13 +53,13 @@ const Services = () => {
                             <p className="text-gray-600 text-sm leading-relaxed mb-6">
                                 {service.desc}
                             </p>
-                            <a href="https://wa.me/13974235583" className="text-brand-gold text-xs font-bold uppercase tracking-widest border-b border-brand-gold/30 pb-1 hover:border-brand-gold transition-colors">
+                            {/* NÚMERO CORRIGIDO AQUI EMBAIXO: final 5583 */}
+                            <a href="https://wa.me/5513974235583" className="text-brand-gold text-xs font-bold uppercase tracking-widest border-b border-brand-gold/30 pb-1 hover:border-brand-gold transition-colors">
                                 Saiba mais
                             </a>
                         </motion.div>
                     ))}
                 </div>
-
             </div>
         </section>
     );
