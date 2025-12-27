@@ -2,11 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Crown, Star, Eye } from 'lucide-react';
 
-// AQUI ESTÁ A LISTA DEFINITIVA - APENAS 3 CATEGORIAS
 const categories = [
     {
         title: "Extensões & Volumes",
-        description: "Técnicas clássicas e volumes tecnológicos.",
+        description: "Técnicas clássicas, volumes e efeitos tradicionais.",
         icon: <Eye className="text-brand-gold" />,
         items: [
             { name: "Fio a Fio (Clássico)", desc: "Leveza e naturalidade absoluta.", msg: "Quero saber sobre o Fio a Fio." },
@@ -15,16 +14,18 @@ const categories = [
             { name: "Volume Brasileiro", desc: "Formato em Y. Retenção excelente.", msg: "Tenho interesse no Volume Brasileiro." },
             { name: "Volume Egípcio", desc: "Formato em W. Mais volume e sofisticação.", msg: "Tenho interesse no Volume Egípcio." },
             { name: "Volume Glamour 5D", desc: "Densidade máxima com leveza.", msg: "Tenho interesse no Volume Glamour 5D." },
+            // MOVIDOS PARA CÁ (Conforme pedido da Laura)
+            { name: "Fox Eyes", desc: "Olhar alongado e sedutor.", msg: "Tenho interesse no efeito Fox Eyes." },
+            { name: "Efeito Sirena", desc: "O charme do efeito sereia.", msg: "Tenho interesse no Efeito Sirena." },
+            { name: "Efeito Delineado", desc: "Simula um delineado perfeito.", msg: "Tenho interesse no Efeito Delineado." },
         ]
     },
     {
         title: "Efeitos Personalizados",
-        description: "Tendências exclusivas desenhadas para o seu estilo.",
+        description: "Tendências exclusivas.",
         icon: <Sparkles className="text-brand-gold" />,
         items: [
-            { name: "Fox Eyes", desc: "Olhar alongado e sedutor.", msg: "Tenho interesse no efeito Fox Eyes." },
-            { name: "Efeito Sirena", desc: "O charme do efeito sereia.", msg: "Tenho interesse no Efeito Sirena." },
-            { name: "Efeito Delineado", desc: "Simula um delineado perfeito.", msg: "Tenho interesse no Efeito Delineado." },
+            // A LISTA AGORA COMEÇA NO AURA
             { name: "Efeito Aura", desc: "Delicadeza e presença.", msg: "Tenho interesse no Efeito Aura." },
             { name: "Efeito Cisne", desc: "Elegância e curvatura diferenciada.", msg: "Tenho interesse no Efeito Cisne." },
             { name: "Efeito Kim Kardashian", desc: "O famoso visual wispy das celebridades.", msg: "Tenho interesse no Efeito Kim K." },
@@ -34,7 +35,7 @@ const categories = [
         ]
     },
     {
-        title: "Capping (Durabilidade 30+)", // Versão correta sem 'dias'
+        title: "Capping (Durabilidade 30+)",
         description: "Alta retenção. A técnica mais duradoura do studio.",
         highlight: true,
         icon: <Crown className="text-brand-gold" />,
@@ -87,8 +88,8 @@ const ServicePrices = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ delay: index * 0.1 }}
                                         className={`group flex flex-col justify-between p-8 rounded-2xl hover:-translate-y-1 transition-all duration-300 border cursor-pointer ${cat.highlight
-                                                ? "bg-brand-dark text-white border-brand-gold/30 hover:border-brand-gold hover:shadow-brand-gold/20 hover:shadow-xl"
-                                                : "bg-brand-light text-brand-dark border-transparent hover:border-brand-gold/30 hover:shadow-xl"
+                                            ? "bg-brand-dark text-white border-brand-gold/30 hover:border-brand-gold hover:shadow-brand-gold/20 hover:shadow-xl"
+                                            : "bg-brand-light text-brand-dark border-transparent hover:border-brand-gold/30 hover:shadow-xl"
                                             }`}
                                     >
                                         <div>

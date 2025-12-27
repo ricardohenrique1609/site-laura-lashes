@@ -1,78 +1,81 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// Importando a imagem que você colocou na pasta assets
+import { ArrowRight, Star } from 'lucide-react';
 import heroImg from '../assets/hero.jpg';
+import logoImg from '../assets/logo.png'; // Importando a logo
 
-const Hero = () => {
+const HeroSection = () => {
     return (
-        <section className="relative bg-brand-light min-h-screen flex items-center pt-10 md:pt-0 overflow-hidden">
+        <section className="relative w-full h-screen min-h-[600px] bg-brand-dark overflow-hidden">
 
-            {/* Círculo decorativo de fundo (Dourado bem clarinho) */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+            {/* Imagem de Fundo com Overlay */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-10"></div>
+                <img src={heroImg} alt="Cílios Perfeitos" className="w-full h-full object-cover opacity-80" />
+            </div>
 
-            <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12 z-10">
+            {/* Conteúdo Principal */}
+            <div className="relative z-20 container mx-auto px-6 h-full flex flex-col justify-center lg:flex-row items-center lg:justify-between gap-12">
 
-                {/* Lado Esquerdo: Textos */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="flex-1 text-center md:text-left"
-                >
-                    <span className="text-brand-gold tracking-[0.25em] text-xs md:text-sm font-bold uppercase mb-4 block">
-                        Lash Designer • Itanhaém
-                    </span>
-                    <h1 className="text-5xl md:text-7xl font-serif text-brand-dark mb-6 leading-[1.1]">
-                        Cílios não são <br /> apenas cílios; <br />
-                        <span className="italic text-brand-gold">são a minha arte.</span>
-                    </h1>
-                    <p className="text-gray-600 text-lg mb-8 font-light max-w-lg mx-auto md:mx-0 leading-relaxed">
-                        Realce sua beleza natural com técnicas personalizadas de extensão de cílios e design de sobrancelhas.
-                    </p>
+                {/* Texto e Logo (Esquerda) */}
+                <div className="lg:w-1/2 text-white space-y-8 mt-10 lg:mt-0">
 
-                    <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-                        <a
-                            href="https://wa.me/13974235583"
-                            target="_blank"
-                            className="bg-brand-dark text-white px-8 py-4 rounded-full hover:bg-brand-gold hover:scale-105 transition-all duration-300 shadow-lg uppercase text-xs tracking-widest font-medium"
-                        >
-                            Agendar Horário
-                        </a>
-                        <a
-                            href="#servicos"
-                            className="px-8 py-4 rounded-full border border-brand-dark/20 text-brand-dark hover:bg-brand-dark hover:text-white transition-all duration-300 uppercase text-xs tracking-widest font-medium"
-                        >
-                            Ver Serviços
-                        </a>
-                    </div>
-                </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        {/* LOGO AQUI - Substituindo o texto escrito */}
+                        <img
+                            src={logoImg}
+                            alt="Laura Garcia Lash Designer"
+                            className="w-64 md:w-80 lg:w-96 mb-6 drop-shadow-2xl filter brightness-110" // Brilho extra p/ o dourado
+                        />
 
-                {/* Lado Direito: Foto */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="flex-1 flex justify-center relative"
-                >
-                    {/* Foto com moldura estilizada */}
-                    <div className="relative w-72 h-80 md:w-[450px] md:h-[550px]">
-                        {/* Borda deslocada para efeito artístico */}
-                        <div className="absolute inset-0 border-2 border-brand-gold translate-x-4 translate-y-4 rounded-t-[10rem] rounded-b-lg"></div>
-
-                        {/* A Imagem em si */}
-                        <div className="absolute inset-0 rounded-t-[10rem] rounded-b-lg overflow-hidden shadow-2xl bg-gray-200">
-                            <img
-                                src={heroImg}
-                                alt="Laura Garcia Lash Designer"
-                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                            />
+                        {/* Pequeno texto de apoio */}
+                        <div className="flex items-center gap-2 text-brand-gold text-sm font-medium tracking-[0.2em] uppercase mb-4 pl-2">
+                            <div className="h-[1px] w-8 bg-brand-gold"></div>
+                            Exclusividade &amp; Requinte
                         </div>
-                    </div>
-                </motion.div>
 
+                        <h2 className="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-lg pl-2 border-l-2 border-brand-gold/30">
+                            Realce sua beleza natural com técnicas de visagismo internacional e a sofisticação que seu olhar merece.
+                        </h2>
+                    </motion.div>
+
+                    {/* Botões */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                        className="flex flex-col sm:flex-row gap-4 pl-2"
+                    >
+                        <a
+                            href="https://wa.me/5513974235583?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+                            target="_blank"
+                            className="bg-brand-gold text-brand-dark px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2"
+                        >
+                            Agendar Horário <ArrowRight size={18} />
+                        </a>
+
+                        <a
+                            href="#menu"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.getElementById('service-prices')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="border border-white/30 text-white px-8 py-4 rounded-full font-medium uppercase tracking-wider hover:bg-white/10 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm"
+                        >
+                            <Star size={18} className="text-brand-gold" /> Ver Menu
+                        </a>
+                    </motion.div>
+                </div>
+
+                {/* Elemento Decorativo (Direita - Opcional, mantém limpo para destacar a logo) */}
+                <div className="lg:w-1/2 hidden lg:block"></div>
             </div>
         </section>
     );
 };
 
-export default Hero;
+export default HeroSection;

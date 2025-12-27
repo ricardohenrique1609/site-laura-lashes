@@ -1,26 +1,25 @@
 import React from 'react';
 import { MapPin, CreditCard, Instagram, Clock } from 'lucide-react';
+import logoImg from '../assets/logo.png'; // Importando a logo
 
 const Footer = () => {
     return (
         <footer className="bg-brand-dark text-white pt-20 pb-10 border-t border-brand-gold/10 overflow-hidden relative">
-            {/* Luz de fundo suave (agora do lado esquerdo pra combinar com o celular) */}
+            {/* Luz de fundo suave */}
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="container mx-auto px-6">
 
                 <div className="flex flex-col lg:flex-row gap-16 mb-12 items-center justify-between">
 
-                    {/* 1. LADO ESQUERDO (AGORA É O CELULAR) */}
+                    {/* 1. LADO ESQUERDO (CELULAR COM MAPA AO VIVO) */}
                     <div className="lg:w-1/2 flex justify-center lg:justify-start perspective-1000 relative z-10">
-
-                        {/* Container do Celular - Design Minimalista Champagne */}
                         <div className="relative w-[280px] h-[580px] bg-black rounded-[45px] shadow-2xl border-[3px] border-[#E5D3B3] ring-1 ring-black/50 overflow-hidden">
 
                             {/* Dynamic Island */}
                             <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-20 pointer-events-none"></div>
 
-                            {/* TELA COM MAPA */}
+                            {/* TELA COM MAPA (IFRAME) */}
                             <div className="w-full h-full bg-gray-100 relative rounded-[40px] overflow-hidden">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.755498428867!2d-46.79375892386866!3d-24.074900578500216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d1d6435032df49%3A0xc0022370c655075c!2sR.%20Telmo%20Diz%2C%20246%20-%20Vila%20S%C3%A3o%20Paulo%2C%20Itanha%C3%A9m%20-%20SP%2C%2011740-000!5e0!3m2!1spt-BR!2sbr!4v1708976451234!5m2!1spt-BR!2sbr"
@@ -42,10 +41,12 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* 2. LADO DIREITO (AGORA É O TEXTO) */}
+                    {/* 2. LADO DIREITO (LOGO E INFOS) */}
                     <div className="lg:w-1/2 space-y-10 relative z-10 lg:pl-12">
                         <div>
-                            <h2 className="text-4xl font-serif text-brand-gold mb-4 tracking-wide">Laura Garcia</h2>
+                            {/* AQUI ESTÁ A LOGO NO LUGAR DO NOME */}
+                            <img src={logoImg} alt="Laura Garcia" className="w-48 mb-6 filter brightness-110" />
+
                             <p className="text-gray-400 text-sm leading-relaxed max-w-md font-light">
                                 Especialista em realçar sua beleza natural através de técnicas avançadas de Visagismo e Extensão de Cílios.
                             </p>
