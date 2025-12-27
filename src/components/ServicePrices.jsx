@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, Crown, Star, Eye, Feather, Diamond } from 'lucide-react';
+import { Sparkles, ArrowRight, Crown, Star, Eye } from 'lucide-react';
 
+// AQUI ESTÁ A LISTA DEFINITIVA - APENAS 3 CATEGORIAS
 const categories = [
     {
         title: "Extensões & Volumes",
@@ -33,7 +34,7 @@ const categories = [
         ]
     },
     {
-        title: "Capping (Durabilidade 30+)",
+        title: "Capping (Durabilidade 30+)", // Versão correta sem 'dias'
         description: "Alta retenção. A técnica mais duradoura do studio.",
         highlight: true,
         icon: <Crown className="text-brand-gold" />,
@@ -41,9 +42,9 @@ const categories = [
             { name: "Mega Brasileiro", desc: "Técnica Capping com fios Y.", msg: "Como funciona o Capping Mega Brasileiro?" },
             { name: "Mega Egípcio", desc: "Técnica Capping com fios W.", msg: "Como funciona o Capping Mega Egípcio?" },
             { name: "Volume 8D", desc: "Super preenchimento e durabilidade.", msg: "Tenho interesse no Volume 8D." },
-            { name: "Mega Fox", desc: "Estilo Fox com técnica de retenção.", msg: "Tenho interesse no Capping Mega Fox." },
-            { name: "Mega Sirena", desc: "Estilo Sirena com técnica de retenção.", msg: "Tenho interesse no Capping Mega Sirena." },
-            { name: "Mega Delineado", desc: "Estilo Delineado com técnica de retenção.", msg: "Tenho interesse no Capping Mega Delineado." },
+            { name: "Mega Fox", desc: "Estilo Fox com técnica de retenção.", msg: "Como funciona o Capping Mega Fox?" },
+            { name: "Mega Sirena", desc: "Estilo Sirena com técnica de retenção.", msg: "Como funciona o Capping Mega Sirena?" },
+            { name: "Mega Delineado", desc: "Estilo Delineado com técnica de retenção.", msg: "Como funciona o Capping Mega Delineado?" },
         ]
     }
 ];
@@ -68,7 +69,6 @@ const ServicePrices = () => {
                 <div className="space-y-20">
                     {categories.map((cat, catIndex) => (
                         <div key={catIndex}>
-                            {/* Título da Categoria */}
                             <div className="flex flex-col items-center md:items-start mb-8 border-b border-brand-gold/20 pb-4">
                                 <h3 className="text-2xl md:text-3xl font-serif text-brand-dark flex items-center gap-3">
                                     {cat.icon}
