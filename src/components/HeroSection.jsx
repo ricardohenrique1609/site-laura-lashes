@@ -39,7 +39,7 @@ const HeroSection = () => {
                         </div>
 
                         <h2 className="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-lg pl-2 border-l-2 border-brand-gold/30">
-                            Realce sua beleza natural com técnicas de visagismo internacional e a sofisticação que seu olhar merece.
+                            Realce sua beleza natural com extensão de cílios, design de sobrancelhas e técnicas de visagismo internacional.
                         </h2>
                     </motion.div>
 

@@ -48,7 +48,7 @@ const Footer = () => {
                             <img src={logoImg} alt="Laura Garcia" className="w-48 mb-6 filter brightness-110" />
 
                             <p className="text-gray-400 text-sm leading-relaxed max-w-md font-light">
-                                Especialista em realçar sua beleza natural através de técnicas avançadas de Visagismo e Extensão de Cílios.
+                                Especialista em realçar sua beleza natural com Extensão de Cílios, Design de Sobrancelhas e técnicas avançadas de Visagismo.
                             </p>
                         </div>
 

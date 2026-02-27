@@ -3,7 +3,7 @@ import Hero from './components/HeroSection';
 import Visagismo from './components/Visagismo';
 import ServicePrices from './components/ServicePrices';
 import Gallery from './components/Gallery';
-// import Accessories from './components/Accessories'; // REMOVIDO
+import Mandamentos from './components/Mandamentos';
 import Reviews from './components/Reviews';
 import WhatsAppBtn from './components/WhatsAppBtn';
 import Footer from './components/Footer';
@@ -15,7 +15,7 @@ function App() {
       <Visagismo />
       <ServicePrices />
       <Gallery />
-      {/* <Accessories />  REMOVIDO DO SITE */}
+      <Mandamentos />
       <Reviews />
       <Footer />
       <WhatsAppBtn />

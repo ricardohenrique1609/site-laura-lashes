@@ -48,6 +48,20 @@ const categories = [
             { name: "Mega Sirena", desc: "Estilo Sirena com técnica de retenção.", msg: "Como funciona o Capping Mega Sirena?" },
             { name: "Mega Delineado", desc: "Estilo Delineado com técnica de retenção.", msg: "Como funciona o Capping Mega Delineado?" },
         ]
+    },
+    {
+        id: 'sobrancelhas',
+        title: "Sobrancelhas",
+        description: "Design, henna e tratamentos para sobrancelhas impecáveis.",
+        icon: <Sparkles size={18} />,
+        items: [
+            { name: "Design de Sobrancelha", desc: "Modelagem personalizada respeitando o formato do seu rosto.", msg: "Quero saber sobre o Design de Sobrancelha." },
+            { name: "Design com Henna", desc: "Design completo + coloração natural com duração de até 20 dias.", msg: "Tenho interesse no Design com Henna." },
+            { name: "Henna Árabe", desc: "Coloração intensa e duradoura com acabamento perfeito.", msg: "Tenho interesse na Henna Árabe." },
+            { name: "Brow Lamination", desc: "Fios penteados, alinhados e volumosos — efeito duradouro.", msg: "Quero saber sobre Brow Lamination." },
+            { name: "Laminação + Design", desc: "Combo completo: laminação com design personalizado.", msg: "Tenho interesse em Laminação + Design." },
+            { name: "Sobrancelha Fio a Fio", desc: "Definição milimétrica para um olhar marcante e natural.", msg: "Tenho interesse em Sobrancelha Fio a Fio." },
+        ]
     }
 ];
 
