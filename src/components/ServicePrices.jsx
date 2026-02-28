@@ -55,12 +55,12 @@ const categories = [
         description: "Design, henna e tratamentos para sobrancelhas impecáveis.",
         icon: <Sparkles size={18} />,
         items: [
-            { name: "Design de Sobrancelha", desc: "Modelagem personalizada respeitando o formato do seu rosto.", msg: "Quero saber sobre o Design de Sobrancelha." },
-            { name: "Design com Henna", desc: "Design completo + coloração natural com duração de até 20 dias.", msg: "Tenho interesse no Design com Henna." },
-            { name: "Henna Árabe", desc: "Coloração intensa e duradoura com acabamento perfeito.", msg: "Tenho interesse na Henna Árabe." },
-            { name: "Brow Lamination", desc: "Fios penteados, alinhados e volumosos — efeito duradouro.", msg: "Quero saber sobre Brow Lamination." },
-            { name: "Laminação + Design", desc: "Combo completo: laminação com design personalizado.", msg: "Tenho interesse em Laminação + Design." },
-            { name: "Sobrancelha Fio a Fio", desc: "Definição milimétrica para um olhar marcante e natural.", msg: "Tenho interesse em Sobrancelha Fio a Fio." },
+            { name: "Design Natural", desc: "Modelagem natural que valoriza o formato original da sua sobrancelha.", msg: "Quero saber sobre o Design Natural de Sobrancelha." },
+            { name: "Aplicação de Henna", desc: "Coloração natural e vegana com duração de até 20 dias na pele.", msg: "Tenho interesse em Aplicação de Henna." },
+            { name: "Aplicação de Coloração", desc: "Coloração profissional para sobrancelhas com resultado duradouro.", msg: "Tenho interesse em Aplicação de Coloração." },
+            { name: "Epilação Egípcia", desc: "Técnica de remoção de pelos com linha para um acabamento preciso.", msg: "Tenho interesse em Epilação Egípcia." },
+            { name: "Brow Lamination", desc: "Fios penteados, alinhados e volumosos com efeito duradouro.", msg: "Quero saber sobre Brow Lamination." },
+            { name: "Spa Labial", desc: "Tratamento de hidratação e cuidado profundo para os lábios.", msg: "Tenho interesse no Spa Labial." },
         ]
     }
 ];
